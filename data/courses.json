@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "image": "https://i.ibb.co/3W3sKkD/web.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Sarah Ahmed",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "image": "https://i.ibb.co/Q9qjJ5r/uiux.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Masterclass",
+    "instructor": "Michael Lee",
+    "duration": "18 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "image": "https://i.ibb.co/4W2DGKm/marketing.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "React Advanced Concepts",
+    "instructor": "David Smith",
+    "duration": "22 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "image": "https://i.ibb.co/WxQv7qT/react.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Graphic Design with Photoshop",
+    "instructor": "Emma Wilson",
+    "duration": "12 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "image": "https://i.ibb.co/W3b0v5L/design.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 6,
+    "title": "Business Strategy & Planning",
+    "instructor": "Daniel Brown",
+    "duration": "16 hours",
+    "rating": 4.4,
+    "level": "Intermediate",
+    "image": "https://i.ibb.co/7Qy4xY2/business.jpg",
+    "category": "Business"
+  }
+]
