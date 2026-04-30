@@ -1,5 +1,6 @@
 import courses from "@/data/courses.json";
-import { notFound } from "next/navigation";
+import { isLoggedIn } from "@/lib/auth";
+import { notFound, redirect } from "next/navigation";
 
 type CourseDetailsProps = {
   params: Promise<{
@@ -8,6 +9,10 @@ type CourseDetailsProps = {
 };
 
 export default async function CourseDetails({ params }: CourseDetailsProps) {
+  if (!isLoggedIn()) {
+    redirect("/login");
+  }
+
   const { id } = await params;
 
   const course = courses.find((course) => course.id === Number(id));
