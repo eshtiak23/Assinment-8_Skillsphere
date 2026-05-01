@@ -8,13 +8,27 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl">
+      
       <nav className="container-main flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-sky-500 via-violet-500 to-pink-500 text-white">
+
+          {/* <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-sky-500 via-violet-500 to-pink-500 text-white">
             S
-          </span>
+          </span> */}
+
+
+          <div className="h-10 w-10 overflow-hidden rounded-xl">
+  <img
+    src="/assets/logo.png"
+    alt="SkillSphere Logo"
+    className="h-full w-full object-cover"
+  />
+</div>
+
+
+
           <span className="bg-gradient-to-r from-sky-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
-            SkillSphere
+            Skill<span className="bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500 bg-clip-text text-transparent">Sphere</span>
           </span>
         </Link>
 

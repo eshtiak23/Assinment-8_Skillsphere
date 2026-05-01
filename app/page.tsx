@@ -11,29 +11,27 @@ export default function Home() {
     <main className="min-h-screen">
       <section className="container-main py-20">
         <div className="rounded-[2rem] bg-gradient-to-br from-sky-100 via-violet-100 to-pink-100 p-10">
-          <p className="mb-4 inline-block rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-violet-600">
-            Learn. Grow. Achieve.
+          <p className="mb-4 inline-block rounded-full bg-white/70 px-3 py-1 text-sm font-semibold text-violet-500">
+            Learn. Apply. Excel.
           </p>
 
           <h1 className="max-w-2xl text-5xl font-black leading-tight text-slate-900">
-            Upgrade Your{" "}
-            <span className="bg-gradient-to-r from-sky-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
-              Skills
+            Learn Fast, {" "} <span className="bg-gradient-to-r from-sky-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
+              Grow Faster.
             </span>{" "}
-            Today 🚀
+            
           </h1>
 
           <p className="mt-5 max-w-xl text-slate-600">
-            Learn from industry experts and boost your career with our top
-            quality online courses.
+           Learn from experts. Build in-demand skills. Grow your career faster.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/courses"
-              className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white"
+              className="rounded-xl bg-sky-500 px-4 py-3 font-semibold text-white"
             >
-              Explore Courses
+              Explore Courses 👀
             </Link>
 
             <Link
@@ -49,7 +47,7 @@ export default function Home() {
       <section className="container-main py-10">
         <div className="mb-6 flex items-center justify-between">
           <h2 className="text-2xl font-black text-slate-900">
-            🔥 Popular Courses
+           Trending Now →
           </h2>
 
           <Link href="/courses" className="text-sm font-bold text-violet-600">
