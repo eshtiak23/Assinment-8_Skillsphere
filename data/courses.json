@@ -2,61 +2,61 @@
   {
     "id": 1,
     "title": "Complete Web Development Bootcamp",
+    "category": "Development",
     "instructor": "John Doe",
-    "duration": "20 hours",
     "rating": 4.8,
+    "duration": "20 hours",
     "level": "Beginner",
-    "image": "https://i.ibb.co/3W3sKkD/web.jpg",
-    "category": "Development"
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop"
   },
   {
     "id": 2,
     "title": "UI/UX Design Fundamentals",
+    "category": "Design",
     "instructor": "Sarah Ahmed",
-    "duration": "15 hours",
     "rating": 4.7,
+    "duration": "15 hours",
     "level": "Beginner",
-    "image": "https://i.ibb.co/Q9qjJ5r/uiux.jpg",
-    "category": "Design"
+    "image": "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=800&auto=format&fit=crop"
   },
   {
     "id": 3,
     "title": "Digital Marketing Masterclass",
+    "category": "Marketing",
     "instructor": "Michael Lee",
-    "duration": "18 hours",
     "rating": 4.6,
+    "duration": "18 hours",
     "level": "Intermediate",
-    "image": "https://i.ibb.co/4W2DGKm/marketing.jpg",
-    "category": "Marketing"
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop"
   },
   {
     "id": 4,
-    "title": "React Advanced Concepts",
-    "instructor": "David Smith",
-    "duration": "22 hours",
+    "title": "React & Next.js Advanced Guide",
+    "category": "Development",
+    "instructor": "David Kim",
     "rating": 4.9,
+    "duration": "22 hours",
     "level": "Advanced",
-    "image": "https://i.ibb.co/WxQv7qT/react.jpg",
-    "category": "Development"
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop"
   },
   {
     "id": 5,
-    "title": "Graphic Design with Photoshop",
-    "instructor": "Emma Wilson",
-    "duration": "12 hours",
+    "title": "Brand Identity & Logo Design",
+    "category": "Design",
+    "instructor": "Emily Watson",
     "rating": 4.5,
+    "duration": "12 hours",
     "level": "Beginner",
-    "image": "https://i.ibb.co/W3b0v5L/design.jpg",
-    "category": "Design"
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop"
   },
   {
     "id": 6,
-    "title": "Business Strategy & Planning",
-    "instructor": "Daniel Brown",
-    "duration": "16 hours",
-    "rating": 4.4,
+    "title": "Social Media Growth Strategy",
+    "category": "Marketing",
+    "instructor": "Chris Martin",
+    "rating": 4.6,
+    "duration": "14 hours",
     "level": "Intermediate",
-    "image": "https://i.ibb.co/7Qy4xY2/business.jpg",
-    "category": "Business"
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop"
   }
 ]
