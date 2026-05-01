@@ -39,7 +39,7 @@ export default function CoursesPage() {
             ))
           ) : (
             <p className="col-span-full text-center text-slate-500">
-              No courses found.
+              No Courses Found.
             </p>
           )}
         </div>
