@@ -1,8 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function CourseCard({ course }) {
   return (
-    <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl"
+    >
       <div className="relative overflow-hidden">
         <img
           src={course.image}
@@ -37,6 +47,6 @@ export default function CourseCard({ course }) {
           View Details
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
