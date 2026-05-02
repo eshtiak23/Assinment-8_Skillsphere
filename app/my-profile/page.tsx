@@ -33,8 +33,8 @@ export default function MyProfilePage() {
           <div className="h-40 bg-gradient-to-br from-sky-400 via-violet-500 to-pink-500"></div>
 
           <div className="px-8 pb-8">
-            <div className="-mt-16 flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
-              <div className="flex items-end gap-5">
+            <div className="-mt-16 flex flex-col items-center gap-6 text-center md:flex-row md:items-end md:justify-between md:text-left">
+              <div className="flex flex-col items-center gap-4 md:flex-row md:items-end md:gap-5">
                 <img
                   src={user.photoUrl || "/assets/logo.png"}
                   alt={user.name}
