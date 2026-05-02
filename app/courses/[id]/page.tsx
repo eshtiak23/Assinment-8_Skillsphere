@@ -8,6 +8,12 @@ type CourseDetailsProps = {
   }>;
 };
 
+export function generateStaticParams() {
+  return courses.map((course) => ({
+    id: String(course.id),
+  }));
+}
+
 export default async function CourseDetails({ params }: CourseDetailsProps) {
   const { id } = await params;
 
