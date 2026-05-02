@@ -1,6 +1,31 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+type User = {
+  name: string;
+  email: string;
+  photoUrl: string;
+  bio?: string;
+};
 
 export default function MyProfilePage() {
+  const [user, setUser] = useState<User>({
+    name: "Abul User",
+    email: "abul@skillsphere.com",
+    photoUrl: "/assets/logo.png",
+    bio: "Student at SkillSphere",
+  });
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem("skillsphere-user");
+
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
+
   return (
     <main className="min-h-screen">
       <section className="container-main py-16">
@@ -11,16 +36,21 @@ export default function MyProfilePage() {
             <div className="-mt-16 flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
               <div className="flex items-end gap-5">
                 <img
-                  src="https://i.pravatar.cc/300?img=5"
-                  alt="User avatar"
+                  src={user.photoUrl || "/assets/logo.png"}
+                  alt={user.name}
                   className="h-32 w-32 rounded-3xl border-4 border-white bg-white object-cover shadow-lg"
                 />
 
                 <div className="pb-2">
                   <h1 className="text-3xl font-black text-slate-900">
-                    Eshtita 
+                    {user.name}
                   </h1>
-                  <p className="mt-1 text-slate-500">eshtita@gmail.com</p>
+                  <p className="mt-1 text-slate-500">{user.email}</p>
+                  {user.bio && (
+                    <p className="mt-2 max-w-md text-sm text-slate-500">
+                      {user.bio}
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -41,14 +71,22 @@ export default function MyProfilePage() {
 
               <div className="rounded-2xl bg-violet-50 p-5">
                 <p className="text-sm font-bold text-violet-600">Progress</p>
-                <h2 className="mt-2 text-3xl font-black text-slate-900">68%</h2>
-                <p className="mt-1 text-sm text-slate-500">Average learning</p>
+                <h2 className="mt-2 text-3xl font-black text-slate-900">
+                  68%
+                </h2>
+                <p className="mt-1 text-sm text-slate-500">
+                  Average learning
+                </p>
               </div>
 
               <div className="rounded-2xl bg-pink-50 p-5">
-                <p className="text-sm font-bold text-pink-600">Certificates</p>
+                <p className="text-sm font-bold text-pink-600">
+                  Certificates
+                </p>
                 <h2 className="mt-2 text-3xl font-black text-slate-900">2</h2>
-                <p className="mt-1 text-sm text-slate-500">Completed tracks</p>
+                <p className="mt-1 text-sm text-slate-500">
+                  Completed tracks
+                </p>
               </div>
             </div>
 
@@ -98,8 +136,17 @@ export default function MyProfilePage() {
                   </div>
 
                   <div className="flex justify-between rounded-xl bg-slate-50 p-4">
-                    <span className="font-bold text-slate-500">Member Since</span>
+                    <span className="font-bold text-slate-500">
+                      Member Since
+                    </span>
                     <span className="font-bold text-slate-900">2026</span>
+                  </div>
+
+                  <div className="flex justify-between rounded-xl bg-slate-50 p-4">
+                    <span className="font-bold text-slate-500">Email</span>
+                    <span className="font-bold text-slate-900">
+                      {user.email}
+                    </span>
                   </div>
                 </div>
               </div>

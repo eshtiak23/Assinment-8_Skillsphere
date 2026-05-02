@@ -45,8 +45,8 @@ export default function LoginPage() {
   const handleGoogleLogin = () => {
     const googleUser = {
       name: "Google User",
-      email: "googleuser@skillsphere.com",
-      photoUrl: "/assets/logo.png",
+      email: "gugliuser@skillsphere.com",
+      photoUrl: "/assets/eshti_logo.png",
     };
 
     localStorage.setItem("skillsphere-user", JSON.stringify(googleUser));
@@ -91,12 +91,17 @@ export default function LoginPage() {
         </form>
 
         <button
-          type="button"
-          onClick={handleGoogleLogin}
-          className="mt-4 w-full rounded-xl border border-slate-200 py-3 font-bold text-slate-700"
-        >
-          Continue with Google
-        </button>
+  type="button"
+  onClick={handleGoogleLogin}
+  className="mt-4 flex w-full items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white py-3 font-bold text-slate-700 transition hover:border-violet-300 hover:bg-slate-50"
+>
+  <img
+    src="/assets/g.webp"
+    alt="Google"
+    className="h-7 w-7 object-contain"
+  />
+  Continue with Google
+</button>
 
         <p className="mt-5 text-center text-sm text-slate-500">
           Don&apos;t have an account?{" "}

@@ -10,7 +10,7 @@ export default function UpdateProfilePage() {
   const [bio, setBio] = useState("");
 
   const previewImage =
-    imageUrl.trim() || "https://i.ibb.co.com/4pDNDk1/avatar.png";
+    imageUrl.trim() || "/assets/eshti_logo.png";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,9 +34,9 @@ export default function UpdateProfilePage() {
       <section className="container-main py-16">
         <div className="mx-auto max-w-3xl rounded-[2rem] border border-slate-200 bg-white shadow-xl">
           <div className="rounded-t-[2rem] bg-gradient-to-r from-sky-500 via-violet-500 to-pink-500 p-8 text-white">
-            <h1 className="text-3xl font-black">Profile Settings</h1>
+            <h1 className="text-3xl font-black">Update Profile </h1>
             <p className="mt-2 text-white/80">
-              Update your personal information and profile appearance.
+              Manage your profile information and appearance.
             </p>
           </div>
 
@@ -50,10 +50,10 @@ export default function UpdateProfilePage() {
 
               <div className="text-center">
                 <p className="font-bold text-slate-900">
-                  {name.trim() || "Demo User"}
+                  {name.trim() || "Abul User"}
                 </p>
                 <p className="text-sm text-slate-500">
-                  Current profile preview
+                  Current Profile Preview
                 </p>
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function UpdateProfilePage() {
                 <input
                   id="email"
                   type="email"
-                  value="demo@skillsphere.com"
+                  value="abul@skillsphere.com"
                   disabled
                   className="mt-2 w-full cursor-not-allowed rounded-xl border border-slate-200 bg-slate-100 px-4 py-3 text-slate-500"
                 />
