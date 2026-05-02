@@ -47,6 +47,9 @@ export default async function CourseDetails({ params }: CourseDetailsProps) {
               <p className="mt-3 text-white/80">
                 Instructor: {course.instructor}
               </p>
+              <p className="mt-4 max-w-3xl leading-7 text-white/90">
+  {course.description}
+</p>
 
               <div className="mt-5 flex flex-wrap gap-4 text-sm">
                 <span className="rounded-full bg-white/20 px-4 py-2">
