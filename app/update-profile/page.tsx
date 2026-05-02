@@ -1,16 +1,36 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+
+type User = {
+  name: string;
+  email: string;
+  photoUrl: string;
+  bio?: string;
+};
 
 export default function UpdateProfilePage() {
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [bio, setBio] = useState("");
+  const [email, setEmail] = useState("demo@skillsphere.com");
 
-  const previewImage =
-    imageUrl.trim() || "/assets/eshti_logo.png";
+  useEffect(() => {
+    const savedUser = localStorage.getItem("skillsphere-user");
+
+    if (savedUser) {
+      const user: User = JSON.parse(savedUser);
+
+      setName(user.name || "");
+      setImageUrl(user.photoUrl || "");
+      setBio(user.bio || "");
+      setEmail(user.email || "demo@skillsphere.com");
+    }
+  }, []);
+
+  const previewImage = imageUrl.trim() || "/assets/logo.png";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,11 +40,14 @@ export default function UpdateProfilePage() {
       return;
     }
 
-    console.log({
+    const updatedUser: User = {
       name,
-      imageUrl,
+      email,
+      photoUrl: imageUrl,
       bio,
-    });
+    };
+
+    localStorage.setItem("skillsphere-user", JSON.stringify(updatedUser));
 
     toast.success("Profile updated successfully!");
   };
@@ -34,9 +57,9 @@ export default function UpdateProfilePage() {
       <section className="container-main py-16">
         <div className="mx-auto max-w-3xl rounded-[2rem] border border-slate-200 bg-white shadow-xl">
           <div className="rounded-t-[2rem] bg-gradient-to-r from-sky-500 via-violet-500 to-pink-500 p-8 text-white">
-            <h1 className="text-3xl font-black">Update Profile </h1>
+            <h1 className="text-3xl font-black"> Update Profile </h1>
             <p className="mt-2 text-white/80">
-              Manage your profile information and appearance.
+              Manage your personal information and profile appearance.
             </p>
           </div>
 
@@ -50,10 +73,10 @@ export default function UpdateProfilePage() {
 
               <div className="text-center">
                 <p className="font-bold text-slate-900">
-                  {name.trim() || "Abul User"}
+                  {name.trim() || "Demo User"}
                 </p>
                 <p className="text-sm text-slate-500">
-                  Current Profile Preview
+                  Current profile preview
                 </p>
               </div>
             </div>
@@ -66,6 +89,7 @@ export default function UpdateProfilePage() {
                 >
                   Full Name
                 </label>
+
                 <input
                   id="name"
                   type="text"
@@ -83,10 +107,11 @@ export default function UpdateProfilePage() {
                 >
                   Email Address
                 </label>
+
                 <input
                   id="email"
                   type="email"
-                  value="abul@skillsphere.com"
+                  value={email}
                   disabled
                   className="mt-2 w-full cursor-not-allowed rounded-xl border border-slate-200 bg-slate-100 px-4 py-3 text-slate-500"
                 />
@@ -99,6 +124,7 @@ export default function UpdateProfilePage() {
                 >
                   Profile Image URL
                 </label>
+
                 <input
                   id="imageUrl"
                   type="url"
@@ -116,6 +142,7 @@ export default function UpdateProfilePage() {
                 >
                   Short Bio
                 </label>
+
                 <textarea
                   id="bio"
                   rows={3}
@@ -138,13 +165,13 @@ export default function UpdateProfilePage() {
                   href="/my-profile"
                   className="flex-1 rounded-xl border border-slate-200 py-3 text-center font-bold text-slate-700"
                 >
-                  Cancel
+                  Back to Profile
                 </Link>
               </div>
             </form>
 
             <div className="mt-10 rounded-2xl bg-slate-50 p-5 text-sm text-slate-600">
-              💡 Tip: Use a square image 1:1 ratio for best profile appearance.
+              Tip: Use a Abla Marka Image
             </div>
           </div>
         </div>
