@@ -26,7 +26,7 @@ export default function Home() {
   {
     name: "Eshtiak Ahmed",
     role: "Web Development Instructor",
-    rating: 4.8,
+    rating: 4.9,
     image: "/assets/eshti_logo.png",
   },
   {
@@ -44,7 +44,7 @@ export default function Home() {
   {
     name: "Naruto Uzumaki",
     role: "Graphic Designer",
-    rating: 4.5,
+    rating: 4.8,
     image: "/assets/naruto.jfif",
   },
 ];
@@ -111,11 +111,11 @@ export default function Home() {
       <section className="container-main py-10">
         <div className="rounded-[2rem] bg-gradient-to-br from-sky-50 via-violet-50 to-pink-50 p-6 shadow-sm sm:p-8">
           <h2 className="text-2xl font-black text-slate-900">
-            Learning Tips
+            Learning Tips 
           </h2>
 
           <p className="mt-2 text-slate-500">
-            Improve your learning with these proven techniques.
+            Designed to Make You Better, Faster.
           </p>
 
           <div className="mt-6 grid gap-5 md:grid-cols-3">
@@ -147,47 +147,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== TOP INSTRUCTORS == */}
 
-      <section className="container-main py-10">
-        <div className="mb-6">
-          <h2 className="text-2xl font-black text-slate-900">
-            Top Instructors
-          </h2>
+      {/* ================= TOP INSTRUCTORS ================= */}
+<section className="container-main py-10">
+  <div className="mb-6">
+    <h2 className="text-2xl font-black text-slate-900">Top Instructors</h2>
 
-          <p className="mt-2 text-slate-500">
-            Learn from industry experts and mentors.
-          </p>
+    <p className="mt-2 text-slate-500">
+      Learn from skilled mentors with practical experience.
+    </p>
+  </div>
+
+  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {instructors.map((instructor) => (
+      <div
+        key={instructor.name}
+        className="group rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+      >
+        <div className="mx-auto h-28 w-28 rounded-full bg-gradient-to-br from-sky-400 via-violet-500 to-pink-500 p-1">
+          <img
+            src={instructor.image}
+            alt={instructor.name}
+            className="h-full w-full rounded-full border-4 border-white object-cover"
+          />
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {instructors.map((instructor) => (
-            <div
-              key={instructor.name}
-              className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1"
-            >
-              <img
-                src={instructor.image}
-                alt={instructor.name}
-                className="mx-auto h-24 w-24 rounded-full object-cover"
-              />
+        <h3 className="mt-5 font-black text-slate-900">
+          {instructor.name}
+        </h3>
 
-              <h3 className="mt-4 font-black text-slate-900">
-                {instructor.name}
-              </h3>
+        <p className="mt-1 text-sm text-slate-500">{instructor.role}</p>
 
-              <p className="mt-1 text-sm text-slate-500">
-                {instructor.role}
-              </p>
-
-              <p className="mt-3 text-sm font-bold text-violet-600">
-                ⭐ {instructor.rating}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+        <p className="mt-4 rounded-full bg-violet-50 px-4 py-2 text-sm font-bold text-violet-600">
+          Rating {instructor.rating}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
    
     </main>
   );
