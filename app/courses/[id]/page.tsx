@@ -14,7 +14,6 @@ export default async function CourseDetails({ params }: CourseDetailsProps) {
   }
 
   const { id } = await params;
-
   const course = courses.find((course) => course.id === Number(id));
 
   if (!course) {
@@ -24,39 +23,59 @@ export default async function CourseDetails({ params }: CourseDetailsProps) {
   return (
     <main className="min-h-screen">
       <section className="container-main py-14">
-        <div className="rounded-3xl bg-gradient-to-br from-sky-500 via-violet-500 to-pink-500 p-10 text-white">
-          <span className="rounded-full bg-white/20 px-4 py-1 text-sm">
-            {course.category}
-          </span>
+        {/* Course Header */}
+        <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
+          <img
+            src={course.image}
+            alt={course.title}
+            className="h-64 w-full object-cover sm:h-80"
+          />
 
-          <h1 className="mt-4 max-w-3xl text-4xl font-black">
-            {course.title}
-          </h1>
+          <div className="bg-gradient-to-br from-sky-500 via-violet-500 to-pink-500 p-6 text-white sm:p-10">
+            <span className="rounded-full bg-white/20 px-4 py-1 text-sm">
+              {course.category}
+            </span>
 
-          <p className="mt-3 text-white/80">Instructor: {course.instructor}</p>
+            <h1 className="mt-4 max-w-3xl text-3xl font-black sm:text-4xl">
+              {course.title}
+            </h1>
 
-          <div className="mt-4 flex flex-wrap gap-6 text-sm">
-            <span>⭐ {course.rating}</span>
-            <span>⏱ {course.duration}</span>
-            <span>🎯 {course.level}</span>
+            <p className="mt-3 text-white/80">
+              Instructor: {course.instructor}
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-4 text-sm">
+              <span className="rounded-full bg-white/20 px-4 py-2">
+                Rating {course.rating}
+              </span>
+              <span className="rounded-full bg-white/20 px-4 py-2">
+                {course.duration}
+              </span>
+              <span className="rounded-full bg-white/20 px-4 py-2">
+                {course.level}
+              </span>
+            </div>
+
+            <button className="mt-7 rounded-xl bg-white px-6 py-3 font-bold text-violet-600 shadow-lg">
+              Enroll Now
+            </button>
           </div>
-
-          <button className="mt-6 rounded-xl bg-white px-6 py-3 font-bold text-violet-600">
-            Enroll Now
-          </button>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        {/* Course Curriculum */}
+        <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
           <h2 className="text-2xl font-black text-slate-900">
             Course Curriculum
           </h2>
 
-          <ul className="mt-6 space-y-3 text-slate-600">
-            <li>✔ Introduction to the Course</li>
-            <li>✔ Basic Concepts</li>
-            <li>✔ Practical Lessons</li>
-            <li>✔ Advanced Topics</li>
-            <li>✔ Final Project</li>
+          <ul className="mt-6 space-y-4 text-slate-600">
+            <li className="rounded-xl bg-slate-50 p-4">
+              ✔ Introduction to the Course
+            </li>
+            <li className="rounded-xl bg-slate-50 p-4">✔ Basic Concepts</li>
+            <li className="rounded-xl bg-slate-50 p-4">✔ Practical Lessons</li>
+            <li className="rounded-xl bg-slate-50 p-4">✔ Advanced Topics</li>
+            <li className="rounded-xl bg-slate-50 p-4">✔ Final Project</li>
           </ul>
         </div>
       </section>
