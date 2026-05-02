@@ -90,17 +90,26 @@ export default function Navbar() {
               </button>
             </>
           ) : (
-            <Link
-              href="/login"
-              className="rounded-xl border border-violet-200 px-4 py-2 text-sm font-semibold text-violet-600 hover:bg-violet-50"
-            >
-              Login
-            </Link>
+            <>
+              <Link
+                href="/login"
+                className="rounded-xl border border-violet-200 px-4 py-2 text-sm font-semibold text-violet-600 hover:bg-violet-50"
+              >
+                Login
+              </Link>
+
+              <Link
+                href="/register"
+                className="rounded-xl bg-gradient-to-r from-violet-500 to-pink-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-violet-200"
+              >
+                Register
+              </Link>
+            </>
           )}
         </div>
 
         {/* Mobile Auth + Menu */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           {isLoggedIn ? (
             <img
               src={user?.photoUrl || "/assets/logo.png"}
@@ -108,12 +117,21 @@ export default function Navbar() {
               className="h-10 w-10 rounded-full border border-violet-200 object-cover"
             />
           ) : (
-            <Link
-              href="/login"
-              className="rounded-xl border border-violet-200 px-4 py-2 text-sm font-semibold text-violet-600 hover:bg-violet-50"
-            >
-              Login
-            </Link>
+            <>
+              <Link
+                href="/login"
+                className="rounded-xl border border-violet-200 px-3 py-2 text-sm font-semibold text-violet-600 hover:bg-violet-50"
+              >
+                Login
+              </Link>
+
+              <Link
+                href="/register"
+                className="rounded-xl bg-gradient-to-r from-violet-500 to-pink-500 px-3 py-2 text-sm font-semibold text-white shadow-lg shadow-violet-200"
+              >
+                Register
+              </Link>
+            </>
           )}
 
           <button

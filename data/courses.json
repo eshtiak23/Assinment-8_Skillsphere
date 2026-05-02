@@ -7,6 +7,7 @@
     "rating": 4.8,
     "duration": "20 hours",
     "level": "Beginner",
+    "description": "Learn HTML, CSS, JavaScript, React, and full-stack web development fundamentals from scratch with practical projects.",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop"
   },
   {
@@ -17,6 +18,7 @@
     "rating": 4.7,
     "duration": "15 hours",
     "level": "Beginner",
+    "description": "Master the basics of user interface and user experience design, including wireframes, layouts, color theory, and usability principles.",
     "image": "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=800&auto=format&fit=crop"
   },
   {
@@ -27,6 +29,7 @@
     "rating": 4.6,
     "duration": "18 hours",
     "level": "Intermediate",
+    "description": "Build practical digital marketing skills with SEO, social media strategy, content planning, analytics, and campaign optimization.",
     "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop"
   },
   {
@@ -37,6 +40,7 @@
     "rating": 4.9,
     "duration": "22 hours",
     "level": "Advanced",
+    "description": "Deepen your frontend skills with advanced React patterns, Next.js App Router, routing, optimization, reusable components, and deployment workflow.",
     "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop"
   },
   {
@@ -47,6 +51,7 @@
     "rating": 4.5,
     "duration": "12 hours",
     "level": "Beginner",
+    "description": "Learn how to create strong visual identities, professional logos, brand colors, typography systems, and presentation-ready design assets.",
     "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop"
   },
   {
@@ -57,6 +62,7 @@
     "rating": 4.6,
     "duration": "14 hours",
     "level": "Intermediate",
+    "description": "Create growth-focused social media strategies using audience research, content calendars, engagement tactics, and performance tracking.",
     "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop"
   }
 ]
