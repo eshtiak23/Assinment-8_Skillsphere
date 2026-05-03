@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -72,7 +73,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Auth Area */}
+        {/* Desktop Auth. Area */}
+
         <div className="hidden items-center gap-3 md:flex">
           {isLoggedIn ? (
             <>
@@ -108,7 +110,8 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Mobile Auth + Menu */}
+        {/* Mobile Auth + Menu Section */}
+
         <div className="flex items-center gap-2 md:hidden">
           {isLoggedIn ? (
             <img

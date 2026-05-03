@@ -27,7 +27,9 @@ export default function Footer() {
         <div className="absolute -right-24 bottom-12 h-72 w-72 rounded-full bg-pink-500/20 blur-3xl"></div>
 
         <div className="container-main relative grid gap-10 py-16 sm:py-20 md:grid-cols-2 lg:grid-cols-5 lg:items-start">
-          {/* Brand */}
+          
+          {/* Brand Section */}
+
           <div className="pt-2">
             <Link href="/" className="inline-flex items-center gap-3">
               <img
@@ -48,6 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
+
           <div className="pt-4 lg:pt-3">
             <h3 className="text-xl font-black">Quick Links</h3>
 
@@ -78,6 +81,7 @@ export default function Footer() {
           </div>
 
           {/* Support */}
+
           <div className="pt-4 lg:pt-3">
             <h3 className="text-xl font-black">Support</h3>
 
@@ -97,6 +101,7 @@ export default function Footer() {
           </div>
 
           {/* Social Links */}
+
           <div className="pt-4 lg:pt-3">
             <h3 className="text-xl font-black">Social Links</h3>
 
@@ -125,7 +130,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact */}
+          {/* Contact Section */}
+
           <div className="pt-4 lg:pt-3">
             <h3 className="text-xl font-black">Contact</h3>
 
@@ -137,12 +143,12 @@ export default function Footer() {
 
               <p className="flex items-center gap-3">
                 <Phone size={18} className="shrink-0 text-pink-400" />
-                <span>+880 1234 567 890</span>
+                <span>+880 1989984056</span>
               </p>
 
               <p className="flex items-center gap-3">
                 <MapPin size={18} className="shrink-0 text-violet-400" />
-                <span>Dhaka, Bangladesh</span>
+                <span>Rajshahi, Bangladesh</span>
               </p>
             </div>
           </div>

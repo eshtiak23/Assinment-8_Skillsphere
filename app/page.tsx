@@ -51,7 +51,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* ================= HERO SECTION ================= */}
+
+      {/* HERO SECTION  */}
+
       <section className="container-main py-20">
         <div className="rounded-[2rem] bg-gradient-to-br from-sky-100 via-violet-100 to-pink-100 p-6 sm:p-10">
           <p className="mb-4 inline-block rounded-full bg-white/70 px-3 py-1 text-sm font-semibold text-violet-500">
@@ -69,7 +71,8 @@ export default function Home() {
             Learn from experts. Build in-demand skills. Grow your career faster.
           </p>
 
-          {/* Buttons (previous style restored) */}
+          {/* Buttons Section */}
+
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/courses"
@@ -88,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= TRENDING COURSES ================= */}
+      {/*  TRENDING COURSES Section  */}
       <section className="container-main py-10">
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-2xl font-black text-slate-900">
@@ -107,7 +110,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= LEARNING TIPS ================= */}
+      {/*  LEARNING TIPS Section  */}
+
       <section className="container-main py-10">
         <div className="rounded-[2rem] bg-gradient-to-br from-sky-50 via-violet-50 to-pink-50 p-6 shadow-sm sm:p-8">
           <h2 className="text-2xl font-black text-slate-900">
@@ -148,7 +152,8 @@ export default function Home() {
       </section>
 
 
-      {/* ================= TOP INSTRUCTORS ================= */}
+      {/* TOP INSTRUCTORS Section */}
+      
 <section className="container-main py-10">
   <div className="mb-6">
     <h2 className="text-2xl font-black text-slate-900">Top Instructors</h2>
