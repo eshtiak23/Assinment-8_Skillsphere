@@ -27,7 +27,9 @@ export default async function CourseDetails({ params }: CourseDetailsProps) {
     <ProtectedRoute>
       <main className="min-h-screen">
         <section className="container-main py-14">
-          {/* Course Header */}
+
+          {/* Course Header's */}
+
           <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
             <img
               src={course.image}
@@ -72,6 +74,8 @@ export default async function CourseDetails({ params }: CourseDetailsProps) {
           </div>
 
           {/* Course Curriculum */}
+
+          
           <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-black text-slate-900">
               Course Curriculum

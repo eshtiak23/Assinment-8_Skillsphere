@@ -3,7 +3,7 @@
 SkillSphere is a modern online learning platform built with Next.js. Users can explore skill-based courses, search courses by title, view protected course details, register/login, update profile information, and experience a responsive UI across mobile, tablet, and desktop.
 
 ## Live Link
-               https://assinment-8-skillsphere.onrender.com
+https://assinment-8-skillsphere.onrender.com
 
 
 ## GitHub Repository
